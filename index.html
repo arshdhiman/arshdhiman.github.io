@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arshpreet Singh - Senior Software Engineer</title>
+    <script type="404.html">
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <meta name="description" content="Senior Software Engineer with 6+ years in MEAN/MERN stack development" />
     <meta name="author" content="Arshpreet Singh" />
 
@@ -27,6 +36,10 @@
   </head>
 
   <body>
+    <script>
+      sessionStorage.redirect = location.href;
+      location.href = '/';
+    </script>
     <div id="root"></div>
   </body>
 </html>
