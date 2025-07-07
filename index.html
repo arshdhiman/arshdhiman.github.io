@@ -22,15 +22,6 @@
   </head>
 
   <body>
-    <script>
-      (function() {
-        const redirect = sessionStorage.getItem('redirect');
-        if (redirect && redirect !== window.location.href) {
-          sessionStorage.removeItem('redirect');
-          window.history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
     <div id="root"></div>
   </body>
 </html>
